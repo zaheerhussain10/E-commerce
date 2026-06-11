@@ -21,7 +21,7 @@ public class OrderController {
 
     private final IOrderService service;
 
-    @PostMapping
+    @PostMapping("/placeOrder")
     public OrderDto placeOrder(@RequestBody OrderDto dto) {
         return service.placeOrder(dto);
     }

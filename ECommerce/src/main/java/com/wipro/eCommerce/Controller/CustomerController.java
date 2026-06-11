@@ -3,6 +3,7 @@ package com.wipro.eCommerce.Controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import com.wipro.eCommerce.dto.CustomerDTO;
@@ -21,11 +22,13 @@ public class CustomerController {
     }
 
     @GetMapping("/all")
+    @PreAuthorize("hasAuthority('ADMIN')")
     public List<CustomerDTO> getAllCustomers() {
         return service.getAllCustomers();
     }
 
     @GetMapping("/{id}")
+    @PreAuthorize("hasAuthority('USER')")
     public CustomerDTO getCustomerById(@PathVariable int id) {
         return service.getCustomerById(id);
     }

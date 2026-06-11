@@ -14,6 +14,6 @@ import lombok.Setter;
 @AllArgsConstructor
 public class OrdersDTO {
 
-    private int customerId;
+    private Integer customerId;
     private List<OrderItemDTO> items;
 }

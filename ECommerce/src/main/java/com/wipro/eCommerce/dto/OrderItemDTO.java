@@ -12,6 +12,6 @@ import lombok.Setter;
 @AllArgsConstructor
 public class OrderItemDTO {
 
-    private int productId;
-    private int quantity;
+    private Integer productId;
+    private Integer quantity;
 }

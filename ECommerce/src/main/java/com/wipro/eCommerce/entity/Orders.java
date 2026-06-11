@@ -18,10 +18,10 @@ public class Orders {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int orderId;
+    private Integer orderId;
 
     private LocalDate orderDate;
-    private double totalAmount;
+    private Double totalAmount;
     private String status;
 
     // Many orders belong to one customer

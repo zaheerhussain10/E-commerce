@@ -6,9 +6,9 @@ spring:
     name: CUSTOMER-SERVICE
 
   datasource:
-    url: jdbc:mysql://localhost:3306/customerdb
+    url: jdbc:mysql://localhost:3306/ecommercedb
     username: root
-    password: root
+    password: zaheer10
 
   jpa:
     hibernate:

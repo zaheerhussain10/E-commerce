@@ -12,9 +12,9 @@ import lombok.Setter;
 @AllArgsConstructor
 public class ProductDTO {
 
-    private int productId;
+    private Integer productId;
     private String productName;
-    private double price;
-    private int quantity;
+    private Double price;
+    private Integer quantity;
     private String category;
 }

@@ -12,9 +12,14 @@ import lombok.Setter;
 @AllArgsConstructor
 public class CustomerDTO {
 
-    private int customerId;
+    private Integer customerId;
     private String name;
     private String mobile;
     private String email;
     private String address;
+    private String password;
+    private String roles;
+    private String status;
+
+    
 }

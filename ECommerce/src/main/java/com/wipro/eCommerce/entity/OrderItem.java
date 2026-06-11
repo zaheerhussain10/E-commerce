@@ -14,10 +14,10 @@ public class OrderItem {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int orderItemId;
+    private Integer orderItemId;
 
-    private int quantity;
-    private double price;
+    private Integer quantity;
+    private Double price;
 
     // Many items belong to one order
     @ManyToOne

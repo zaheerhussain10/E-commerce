@@ -9,21 +9,21 @@ spring:
     gateway:
       routes:
         - id: PRODUCT-SERVICE
-          uri: lb://PRODUCT-SERVICE
+          uri: lb://ECOMMERCE-PRODUCT-SERVICE
           predicates:
             - Path=/products/**
 
         - id: CUSTOMER-SERVICE
-          uri: lb://CUSTOMER-SERVICE
+          uri: lb://ECOMMERCE-CUSTOMER-SERVICE
           predicates:
             - Path=/customers/**
 
         - id: ORDER-SERVICE
-          uri: lb://ORDER-SERVICE
+          uri: lb://ECOMMERCE-ORDER-SERVICE   # ✅ FIXED HERE
           predicates:
             - Path=/orders/**
 
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka
+      defaultZone: http://localhost:8761/eureka/   # ✅ FIXED
